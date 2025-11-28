@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="/new">Send New Message</a>
+        </header>
+        <main class="center">
+            <% for(let i = 0; i<messages.length; i++) { %>
+                <div class="message">
+                    <h2><%= messages[i].user %></h3>
+                    <small><%= messages[i].added %></small>
+                    <p class="message-text"><%= messages[i].text %></p>
+
+                    <a href="/message/<%= i %>">More detailed</a>
+                </div>
+            <% } %>
+        </main>
+    </body>
+</html>
